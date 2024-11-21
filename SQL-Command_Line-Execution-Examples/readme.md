@@ -1,6 +1,6 @@
 # SQL Command Line Execution Examples
 
-What are few different ways we can run SQL commands at the commande line?
+What are a few different ways we can run SQL commands at the commande line?
 
 ## **Windows Command Terminal** ##
 
