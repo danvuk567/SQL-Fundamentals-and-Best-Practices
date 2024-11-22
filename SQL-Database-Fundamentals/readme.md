@@ -10,9 +10,7 @@
 
 **DML:** Data Manipulation language allow to change or manipulate the existing data of the tables. DML focuses on manipulating the data itself. Common DML commands include: *UPDATE*, *DELETE*, and *INSERT*.
 
-**DCL:** Data Control Language allow Administrator of the database to manage the rights and permissions of the users in the database. DCL focuses on permissions and access control. The key DCL commands are:
-
-*GRANT* and *REVOKE*.
+**DCL:** Data Control Language allow Administrator of the database to manage the rights and permissions of the users in the database. DCL focuses on permissions and access control. The key DCL commands are: *GRANT* and *REVOKE*.
 
 **TCL:** Transaction Control language is used to maintain the SQL operations within the database. It also allows the changes to be saved which are made by the DML commands. TCL focuses on transaction management. Common TCL commands include: *COMMIT*, *SET TRANSACTION*, *ROLLBACK*, and *SAVEPOINT*.
 
