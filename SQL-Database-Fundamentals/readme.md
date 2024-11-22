@@ -3,3 +3,5 @@
 ## SQL Command Types
 
 ![SQL_Command_Types](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Command_Types.jpg?raw=true)
+
+### **What are DDL, DML, DCL, TCL, and DQL in SQL?**
