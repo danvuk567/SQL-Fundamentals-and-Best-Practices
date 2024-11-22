@@ -27,5 +27,13 @@ They are typically exececuted in this order:
 
 ## Query Optimization Methods
 
+1. When joining multiple tables using the **JOIN** clause, **join the smaller tables first before progressively joining larger tables**. When you join the smallest table first, the database engine can cache the smaller dataset in memory more easily, since it requires less memory to store. This can speed up processing for the subsequent joins, especially when the data doesn't fit entirely into memory and the database has to rely on disk I/O. If you start with the smallest table, you also reduce the number of rows that need to be matched in the next join. 
+
+2. Create **Indexes** on columns that are frequently used in the WHERE, JOIN, or ORDER BY clauses. This way, you locate the rows that match the condition, rather than scanning the entire table which slows down performance on larger tables.
+
+3. Use the **WHERE** clause when possible to reduce the data being pulled. This is especially true when using the HAVING clause in order to reduce the rows needed to be aggregated.
+
+4. Use **HAVING** to filter aggregated data. Don't use it for non-aggrageted data, instead use the WHERE clause.
+
 
 
