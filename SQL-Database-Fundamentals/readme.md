@@ -26,14 +26,14 @@
          
   The different types of views are:
 
-  **Simple:**  is a view based on a single table and does not have JOINs, aggregates, subqueries, and grouping.
+  * **Simple:**  is a view based on a single table and does not have JOINs, aggregates, subqueries, and grouping.
 
-  **Complex:** is a view built using complex queries and combines multiple tables, operations, or logic including JOINs, aggregates, subqueries, grouping, and filtering.
+  * **Complex:** is a view built using complex queries and combines multiple tables, operations, or logic including JOINs, aggregates, subqueries, grouping, and filtering.
 
-  **Inline:** is a view built on a subquery in the FROM clause, which provides a temporary table and simplifies a complicated query.
+  * **Inline:** is a view built on a subquery in the FROM clause, which provides a temporary table and simplifies a complicated query.
 
-  **Materialized:** is a database object that stores the definition and the details of a query as a physical table. It allows for faster query performance because the results are cached and do not need to be recalculated 
-                every time the view is queried.
+  * **Materialized:** is a database object that stores the definition and the details of a query as a physical table. It allows for faster query performance because the results are cached and do not need to be
+                      recalculated every time the view is queried.
          
 **Indexes:** are created on one or more columns and allow for faster search and retrieval operations. Indexes improve query performance but can slow down write operations (INSERT, UPDATE, DELETE).
 
