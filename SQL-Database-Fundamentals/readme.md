@@ -68,9 +68,22 @@
 
  ## Normalization
 
- Normalization in database design is the process of organizing the columns and tables of a relational database to minimize redundancy and dependency. Normalization, splits the big table into multiple sub tables and ensure that database integrity constraints are intact with their relationship with each other. Denormalization (the process of introducing redundancy) may be considered when performance optimization is necessary, particularly in read-heavy applications or when complex queries require multiple JOIN operations.
+ **Normalization** in database design is the process of organizing the columns and tables of a relational database to minimize redundancy and dependency. Normalization, splits the big table into multiple sub tables and ensure that database integrity constraints are intact with their relationship with each other. **Denormalization** (the process of introducing redundancy) may be considered when performance optimization is necessary, particularly in read-heavy applications or when complex queries require multiple JOIN operations.
 
+## ACID 
 
+**ACID** is an acronym that represents a set of properties that guarantee that database transactions are processed reliably and ensure the integrity of the database. 
+  It  stands for:
+
+  Atomicity: ensures that a transaction is treated as a single "unit" of work, meaning that it either completes entirely or does not complete at all.
+  
+  Consistency: ensures that a transaction takes the database from one valid state to another valid state, preserving all the rules, constraints, and data integrity (such as foreign keys, checks, and triggers).
+  
+  Isolation: ensures that concurrent transactions do not interfere with each other. Each transaction is executed as if it is the only one running on the system, even if other transactions are occurring at the same time.
+  
+  Durability: ensures that once a transaction has been committed, its changes are permanent, even in the case of a system crash or power failure.
+
+  
 
 
            
