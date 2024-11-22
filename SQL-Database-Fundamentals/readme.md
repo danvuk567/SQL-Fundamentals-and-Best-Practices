@@ -66,6 +66,10 @@
 
 * **Synonyms:** provide an alternative name for an existing database object and create a level of abstraction.
 
+ ## Normalization
+
+ Normalization in database design is the process of organizing the columns and tables of a relational database to minimize redundancy and dependency. Normalization, splits the big table into multiple sub tables and ensure that database integrity constraints are intact with their relationship with each other. Denormalization (the process of introducing redundancy) may be considered when performance optimization is necessary, particularly in read-heavy applications or when complex queries require multiple JOIN operations.
+
 
 
 
