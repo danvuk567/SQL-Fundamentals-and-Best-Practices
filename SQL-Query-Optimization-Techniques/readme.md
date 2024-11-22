@@ -38,7 +38,8 @@ They are typically exececuted in this order:
 5. Avoid **Nested Loops** where a query contains one query inside another, where the inner query is executed multiple times—often once for each row returned by the outer query. This can significantly degrade performance, especially when working with large datasets. Instead use JOINS or Common Table Expresssions (CTEs) using the **WITH** clause.
 
 6. Only use the columns you need in the **SELECT** clause to reduce data transfer to speed up query execution.
-
+   
+7. Use **EXPLAIN PLAN** when performance is a concern. It is a command that shows the execution plan of an SQL query, helping you understand how the database processes the query and identifying areas for optimization.
 
 
 
