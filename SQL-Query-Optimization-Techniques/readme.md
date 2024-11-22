@@ -23,7 +23,7 @@ They are typically exececuted in this order:
 
 * **ORDER BY:** sorts the result set based on one or more columns and is one of the final steps before returning the result set.
 
-* **LIMIT / OFFSET:** can be applied last and control how many rows are returned and from which point in the result set.
+* **LIMIT / OFFSET:** can be applied last and control how many rows are returned and from which point in the result set. **TOP** is used in SQL Server.
 
 ## Query Optimization Methods
 
