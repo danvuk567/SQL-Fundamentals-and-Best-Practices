@@ -9,6 +9,8 @@ Data cleaning in SQL involves correcting errors, inconsistancies, and missing va
 **1. Handling missing values:** The COALESCE(), IFNULL() and ISNULL() function can be used to replace missing or NULL values in a table.
 
 
+
+
 ## Exploratory Data Analysis
 
 ![SQL_EDA](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_EDA.jpg?raw=true)
