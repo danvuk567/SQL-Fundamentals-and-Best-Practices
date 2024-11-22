@@ -37,15 +37,15 @@
 
 * **DEFAULT:** sets a default value for a column.
   
-* **UNIQUE:** ensures all values are unique.
+* **UNIQUE:** ensures all values are unique. It also creates a unique index.
   
 * **NOT NULL:** prevents NULL values.
   
 * **CHECK:** is used to limit the range of values that can be inserted into a column. It can be applied to one or more columns, and the condition must be true for each row in the table.
   
-* **PRIMARY KEY:** uniquely identifies each record in a table and combines NOT NULL and UNIQUE.
+* **PRIMARY KEY:** uniquely identifies each record in a table and combines NOT NULL and UNIQUE constraints. It also creates a unique index.
   
-* **FOREIGN KEY:** is used to enforce referential integrity between two tables. A foreign key links two tables referencing the primary key in another table.
+* **FOREIGN KEY:** is used to enforce referential integrity between two tables. A foreign key links two tables referencing the primary key in another table. It also creates a non-unique index.
 
 * **Schemas:** is a logical container that groups related database objects like tables, views, and procedures. Schemas help organize the database and manage permissions at a higher level.
 
