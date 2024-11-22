@@ -14,6 +14,13 @@ We can also run a SQL script file using the *-i* parameter:
 
     sqlcmd -S localhost -U your_username -P your_password -v ticker=’MSFT’ -i "C:\path\dept_sales_query.sql"
 
+Or we can simply run SQL commnds in interactive mode by calling the SQL application at the prompt:
+
+    sqlcmd
+    1> SELECT * FROM Financial_Securities.Equities.Equities;
+    2> GO
+    ...
+    1> EXIT
 
 ## **Windows Powershell** ##
 
