@@ -16,6 +16,7 @@
 
 **DQL:** Data Query Language is used to query or retrieve data from the database. DQL specifically uses the *SELECT* statement.
 
+
 ## Database Object Types
 
 **Tables:** are the fundamental storage objects in a database. They store the actual data in rows and columns. Each row represents a single record, and each column represents an attribute of the record.
@@ -31,6 +32,18 @@
 
 **Triggers:** are automated actions that are executed in response to specific events (e.g., INSERT, UPDATE, DELETE) on a table or view. They are often used for enforcing business rules, maintaining data integrity, and 
               logging changes.
+
+  The different types of triggers are:
+
+  * **BEFORE Triggers:** is executed before the data modification operation (e.g., INSERT, UPDATE, DELETE) is carried out.
+
+  * **AFTER Triggers:** is executed after the data modification operation has completed. The trigger is fired only after the operation has been successfully performed.
+  
+  * **INSTEAD OF Triggers:** is executed instead of the actual data modification operation. This allows you to override the default behavior (e.g., inserting data into a table) with custom logic.
+
+  * **Event Based Triggers:** are based on the specific data modification event that causes them to fire. These events include INSERT, UPDATE, and DELETE.
+
+  * **Scope Based Triggers:** are defined at the level of the row or the statement, depending on whether you want the trigger to execute for each individual row affected or just once per operation (statement-level).
 
 **Constraints:** are rules applied to table columns to enforce data integrity. They ensure that data meets certain conditions before it is inserted or updated in the table.
   The different types of constraints are:
@@ -52,6 +65,8 @@
 * **Functions:** are similar to stored procedures but are used primarily to return a value.
 
 * **Synonyms:** provide an alternative name for an existing database object and create a level of abstraction.
+
+
 
 
            
