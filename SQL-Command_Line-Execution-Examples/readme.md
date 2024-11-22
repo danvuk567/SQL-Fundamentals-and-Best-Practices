@@ -1,5 +1,7 @@
 # SQL Command Line Execution Examples
 
+[SQL_Terminal_Commands.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Terminal_Commands.jpg)
+
 What are a few different ways we can run SQL commands at the commande line?
 
 ## **Windows Command Terminal** ##
