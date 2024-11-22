@@ -24,6 +24,17 @@
 **Views:** are virtual tables that contain a result set from a query. A view doesn't store data itself but displays data stored in other tables. It simplifies complex queries and can provide a security layer by limiting 
          user access to specific data.
          
+  The different types of views are:
+
+  **Simple:**  is a view based on a single table and does not have JOINs, aggregates, subqueries, and grouping.
+
+  **Complex:** is a view built using complex queries and combines multiple tables, operations, or logic including JOINs, aggregates, subqueries, grouping, and filtering.
+
+  **Inline:** is a view built on a subquery in the FROM clause, which provides a temporary table and simplifies a complicated query.
+
+  **Materialized:** is a database object that stores the definition and the details of a query as a physical table. It allows for faster query performance because the results are cached and do not need to be recalculated 
+                every time the view is queried.
+         
 **Indexes:** are created on one or more columns and allow for faster search and retrieval operations. Indexes improve query performance but can slow down write operations (INSERT, UPDATE, DELETE).
 
 **Sequences:** are used to generate unique numeric values, often used to create primary key values automatically. They are commonly used in auto-incrementing columns like an ID column.
@@ -48,23 +59,23 @@
 **Constraints:** are rules applied to table columns to enforce data integrity. They ensure that data meets certain conditions before it is inserted or updated in the table.
   The different types of constraints are:
 
-* **DEFAULT:** sets a default value for a column.
+  * **DEFAULT:** sets a default value for a column.
   
-* **UNIQUE:** ensures all values are unique. It also creates a unique index.
+  * **UNIQUE:** ensures all values are unique. It also creates a unique index.
   
-* **NOT NULL:** prevents NULL values.
+  * **NOT NULL:** prevents NULL values.
   
-* **CHECK:** is used to limit the range of values that can be inserted into a column. It can be applied to one or more columns, and the condition must be true for each row in the table.
+  * **CHECK:** is used to limit the range of values that can be inserted into a column. It can be applied to one or more columns, and the condition must be true for each row in the table.
   
-* **PRIMARY KEY:** uniquely identifies each record in a table and combines NOT NULL and UNIQUE constraints. It also creates a unique index.
+  * **PRIMARY KEY:** uniquely identifies each record in a table and combines NOT NULL and UNIQUE constraints. It also creates a unique index.
   
-* **FOREIGN KEY:** is used to enforce referential integrity between two tables. A foreign key links two tables referencing the primary key in another table. It also creates a non-unique index.
+  * **FOREIGN KEY:** is used to enforce referential integrity between two tables. A foreign key links two tables referencing the primary key in another table. It also creates a non-unique index.
 
-* **Schemas:** is a logical container that groups related database objects like tables, views, and procedures. Schemas help organize the database and manage permissions at a higher level.
+  * **Schemas:** is a logical container that groups related database objects like tables, views, and procedures. Schemas help organize the database and manage permissions at a higher level.
 
-* **Functions:** are similar to stored procedures but are used primarily to return a value.
+  * **Functions:** are similar to stored procedures but are used primarily to return a value.
 
-* **Synonyms:** provide an alternative name for an existing database object and create a level of abstraction.
+  * **Synonyms:** provide an alternative name for an existing database object and create a level of abstraction.
 
  ## Normalization
 
