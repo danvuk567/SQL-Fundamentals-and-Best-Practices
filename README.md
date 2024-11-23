@@ -4,22 +4,13 @@
 
 ## **Objective** ##
 
-This section describes SQL 
-
-## **Highlights** ##
-
-* The number of applicants that owned a home or had a mortgage that are borrowing for home improvement is 539 out of 8146.
-* The average age of those borrowing more than 20% of their income and making less than 15000 is 26.
-* Only 3 applicants had defaulted on their loan previously were looking to do debt consolidation and borrowing more than 50% of their income.
+This section describes how and where to execution SQL commands, foundational and fundamental concepts, query optimization techniques, and data cleaning.
 
 ## **Table of Contents** ##
 
-- [Linux Data Cleaning and Analysis](https://github.com/danvuk567/Linux-Command-Data-Analytics/blob/main/Linux-Data-Cleaning-and-Analysis/readme.md)
+- [SQL-Database-Fundamentals](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Database-Fundamentals/readme.md)
+- [SQL-Command-Line-Exection-Examples](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Command-Line-Exection-Examples/readme.md)
+- [SQL-Query-Optimization-Techniques](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Query-Optimization-Techniques/readme.md)
+- [SQL-Data-Cleaning](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Data-Cleaning/readme.md)
   
-## **Data Sources Used** ##
 
-- [Kaggle Loan risk prediction dataset](https://www.kaggle.com/datasets/ganjerlawrence/loan-risk-prediction-dataset).
-  
-## **Technologies** ##
-
-- Language: Linux Bash commands 
