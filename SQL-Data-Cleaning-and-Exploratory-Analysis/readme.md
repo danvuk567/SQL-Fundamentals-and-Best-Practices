@@ -22,6 +22,8 @@ Let's update one of the values to 0 and then show the results.
 
 ![SQL_COALESCE4.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_COALESCE4.jpg?raw=true)
 
+**2. Removing Duplicates:** The COALESCE(), IFNULL() and ISNULL() function can be used to replace missing or NULL values in a table.
+
 ## Exploratory Data Analysis
 
 ![SQL_EDA](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_EDA.jpg?raw=true)
