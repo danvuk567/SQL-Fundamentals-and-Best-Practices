@@ -48,7 +48,7 @@ We can see that Ticker_Name = 'CHKP' has 2 for ROW_NUMBER() and that Ticker_Name
 
 ![SQL_Standardize_Text1.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text1.jpg?raw=true)
 
-![SQL_Standardize_Text2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text2?raw=true)
+![SQL_Standardize_Text2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text2.jpg?raw=true)
 
 
 
