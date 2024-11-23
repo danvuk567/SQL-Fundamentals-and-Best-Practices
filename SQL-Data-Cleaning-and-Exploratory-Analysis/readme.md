@@ -4,7 +4,7 @@
 
 ![SQL_Data_Cleaning](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Data_Cleaning.jpg?raw=true)
 
-Data cleaning in SQL involves correcting errors, inconsistancies, and missing values. The following topics will explore SQL functions and techniques to improve data quality and accuracy.
+Data cleaning in SQL involves correcting errors, inconsistencies, and missing values. The following topics will explore SQL functions and techniques to improve data quality and accuracy.
 
 **1. Handling missing values:** The **COALESCE()**, **IFNULL()** and **IFNULL()** function can be used to replace missing or NULL values in a table.
 
@@ -30,11 +30,11 @@ Here is an example where we identify duplicate *Ticker_Name* column values using
 
 ![SQL_Duplicates2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Duplicates2.jpg?raw=true)
 
-Here we use DISTINCT() to remove duplicate values from our data set.
+Here we use DISTINCT() to remove duplicate values from our data set and can see that Ticker_Name = 'CHKP' appears once.
 
 ![SQL_Duplicates3.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Duplicates3.jpg?raw=true)
 
-To permanantly remove duplicates from the table, we can use ROW_NUMBER() function to identify the duplicate rows and delete them.
+To permanently remove duplicates from the table, we can use ROW_NUMBER() function to identify the duplicate rows and delete them.
 
 ![SQL_Duplicates4.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Duplicates4.jpg?raw=true)
 
