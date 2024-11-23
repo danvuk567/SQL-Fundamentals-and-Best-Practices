@@ -4,7 +4,7 @@
 
 ## **Objective** ##
 
-This section describes definitions and fundamental concepts, how and where to execution SQL commands, query optimization techniques, and data cleaning.
+This section describes SQL definitions and fundamental concepts, how and where to execution SQL commands, query optimization techniques, and data cleaning.
 
 ## **Table of Contents** ##
 
