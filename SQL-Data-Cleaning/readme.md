@@ -4,7 +4,7 @@
 
 ![SQL_Data_Cleaning](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Data_Cleaning.jpg?raw=true)
 
-Data cleaning in SQL involves correcting errors, inconsistencies, and missing values. The following topics will explore SQL functions and techniques to improve data quality and accuracy.
+Data cleaning in SQL involves correcting errors, inconsistencies, and missing values. Here are a few methods that we will explore using SQL functions and techniques to improve data quality and accuracy.
 
 **1. Handling missing values:** The **COALESCE()**, **IFNULL()** and **IFNULL()** function can be used to replace missing or NULL values in a table.
 
