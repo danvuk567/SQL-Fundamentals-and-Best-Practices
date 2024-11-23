@@ -40,6 +40,19 @@ To permanently remove duplicates from the table, we can use ROW_NUMBER() functio
 
 ![SQL_Duplicates5.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Duplicates5.jpg?raw=true)
 
+**3. Standardize Text:** The LOWER(), UPPER() AND TRIM() functions can be used to ensurey that text is consistent, which is important for comparisons, storage, and presentation.
+
+The TRIM() function removes leading and trailing spaces. Using TRIM() WITH UPPER() OR LOWER() can also help identofy duplicates.
+
+We can see that Ticker_Name = 'CHKP' has 2 for ROW_NUMBER() and that Ticker_Name = 'Chkp' exists which identifies the duplicate.
+
+![SQL_Standardize_Text1.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text1.jpg?raw=true)
+
+![SQL_Standardize_Text2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text2?raw=true)
+
+
+
+
 
 ## Exploratory Data Analysis
 
