@@ -8,8 +8,13 @@ Data cleaning in SQL involves correcting errors, inconsistancies, and missing va
 
 **1. Handling missing values:** The COALESCE(), IFNULL() and ISNULL() function can be used to replace missing or NULL values in a table.
 
+Let's look at an example in an SQL Server database where we have NULL values.
 
 
+
+We can use the COALESCE function that returns the first non-NULL value from a list of arguments where we replace NULL with the value 0.
+
+Let's update one of the values to 0 and then show the results.
 
 ## Exploratory Data Analysis
 
