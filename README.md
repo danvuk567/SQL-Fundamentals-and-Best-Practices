@@ -4,7 +4,7 @@
 
 ## **Objective** ##
 
-This section describes
+This section describes SQL 
 
 ## **Highlights** ##
 
