@@ -64,3 +64,22 @@ Let's look at what the table structure looks like. Using the **INFORMATION_SCHEM
         AND table_schema = 'dbo';          
           
 ![SQL_Table_Structure.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Structure.jpg?raw=true)
+
+# Table Data Exploration
+
+Let's look at the first 5 rows using the **TOP** function and then use **COUNT**, **DISTINCT**, **MIN**, **MAX**, and **AVG** to explore what the data looks like. There are *44* rows in the *Global_Index_Targets* table, 2 distinct *Min_Date* values, and average of *0.194* for *Target_Weight* which is closer to the minimum value of *0.0286* than the maximum value of *0.194*. This may indicate that the higher values closer to the max are not as common. There are also no missing values in the *Target_Weight* column.
+
+        SELECT TOP 5 *
+        FROM dbo.Global_Index_Targets;
+
+        SELECT 
+         COUNT(*) AS "Number of Rows",
+         COUNT(DISTINCT Min_Date) AS "Number of Distinct Min Dates",
+         ROUND(MIN(Target_Weight), 4) AS "Min Target Weight",
+         ROUND(AVG(Target_Weight), 4) AS "Avg Target Weight",
+         ROUND(MAX(Target_Weight), 4) AS "Max Target Weight",
+         COUNT(CASE WHEN Target_Weight IS NULL THEN 1 END) AS "Number of Target Weight Missing Values"
+        FROM dbo.Global_Index_Targets;
+
+![SQL_Table_Data_Exploration.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Data_Exploration.jpg?raw=true)
+
