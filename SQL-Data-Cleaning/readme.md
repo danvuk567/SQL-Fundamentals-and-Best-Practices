@@ -186,3 +186,14 @@ Now let's refine the query and use the **MAX** function on *match_word_strength*
 
 ![Remove_Bad_Characaters.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/Remove_Bad_Characaters.jpg?raw=true)
 
+**7. Outlier Validation:** Certain numberical values may not make sense and are considered outliers. In this example, we look for any *total_price* that is negative, $0 or greater than or equal to $500.
+
+![SQL_Outliers.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Outliers.jpg?raw=true)
+
+**8. Combine Text:** The **CONCAT** function can be used to combine text. Here is an example of combining the *first_name* and *last_name* as *name* column.
+
+![SQL_Combine_Text.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Combine_Text.jpg?raw=true)
+
+**9. Text Validation:** The **PATINDEX** function can be used to do pattern matching and validate if certain text requires the inclusion of certain characters. In this example, we look for emails that is missing the *@* character which would be invalid.
+
+![SQL_Text_Validation.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Text_Validation.jpg?raw=true)
