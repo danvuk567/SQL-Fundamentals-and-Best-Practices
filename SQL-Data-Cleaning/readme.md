@@ -119,7 +119,7 @@ In this example. we can see that Ticker_Name = 'CHKP' has 2 for ROW_NUMBER() and
 
 ![SQL_Mispelled_Text1.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Mispelled_Text1.jpg?raw=true)
 
-Now let's refine the query and use the **MAX** function to identify the rows that need to be corrected by replacing category by description as *new_category*. There were 2 cases which we have identified correctly using the query logic.
+Now let's refine the query and use the **MAX** function on *match_word_strength* to identify the rows that need to be corrected by replacing category by description as *new_category*. There were 2 cases which we have identified correctly using the query logic.
 
     WITH category_words AS
     (SELECT
