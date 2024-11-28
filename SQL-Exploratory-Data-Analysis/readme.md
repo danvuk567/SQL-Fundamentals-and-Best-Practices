@@ -17,7 +17,7 @@ Let's look an example of how we can find out what the indexes are on a table. We
      ON ic.object_id = c.object_id AND ic.column_id = c.column_id
     WHERE i.object_id = OBJECT_ID('dbo.Global_Index_Targets');
 
-![SQL_Data_Cleaning](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Data_Cleaning.jpg?raw=true)
+![SQL_Table_Indexes.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Indexes.jpg?raw=true)
 
 For any **Foreign Key** constraints that may exist on a table, this complex query can retrieve relevant information. In this example, we see that the Foreign Key *FK_Global_Index_Targ_Index_ID* on the parent table *Global_Index_Targets* references the table *Global_Indices* on the column *Index_ID* in both tables.
 
@@ -41,3 +41,5 @@ For any **Foreign Key** constraints that may exist on a table, this complex quer
          ON fkc.referenced_column_id = c2.column_id AND fkc.referenced_object_id = c2.object_id
         WHERE tp.name = 'Global_Index_Targets'
          AND tp.schema_id = SCHEMA_ID('dbo');
+         
+![SQL_Table_Foreign_Key.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Foreign_Key.jpg?raw=true)
