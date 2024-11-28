@@ -1,4 +1,4 @@
-# SQL Exploratory Table Structure and Data Analysis
+# SQL Table Structure Exploration and Data Analysis
 
 ## Table Indices and Constraints
 
