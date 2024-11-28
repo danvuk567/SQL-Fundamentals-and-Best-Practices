@@ -46,9 +46,21 @@ For any **Foreign Key** constraints that may exist on a table, this complex quer
 
 ## Table Structure
 
-Let's look at what the table structure looks like. Using the **INFORMATION_SCHEMA.COLUMNS** table, we can count he number of columns and then explore what type of data is in those columns.
+Let's look at what the table structure looks like. Using the **INFORMATION_SCHEMA.COLUMNS** table, we can count he number of columns and then explore what type of data is in those columns. The follwoing queries show that there are 5 columns with date, int and real types and no string types. *Max_Date* and *Target_Weight* can have null values.
 
-        SELECT COUNT(COLUMN_NAME) AS "Number of Columns"
+        SELECT 
+          COUNT(COLUMN_NAME) AS "Number of Columns"
         FROM INFORMATION_SCHEMA.COLUMNS
         WHERE table_name = 'Global_Index_Targets'
           AND table_schema = 'dbo';
+
+        SELECT 
+          COLUMN_NAME, 
+          DATA_TYPE, 
+          CHARACTER_MAXIMUM_LENGTH,
+          IS_NULLABLE
+        FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE table_name = 'Global_Index_Targets'
+        AND table_schema = 'dbo';          
+          
+![SQL_Table_Structure.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Structure.jpg?raw=true)
