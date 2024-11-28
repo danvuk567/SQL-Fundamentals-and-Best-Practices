@@ -10,7 +10,8 @@ This section describes SQL definitions and fundamental concepts, where and how t
 
 - [SQL-Database-Fundamentals](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Database-Fundamentals/readme.md)
 - [SQL-Command-Line-Execution-Examples](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Command-Line-Execution-Examples/readme.md)
-- [SQL-Query-Optimization-Techniques](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Query-Optimization-Techniques/readme.md)
+- [SQL Exploratory Table Structure and Data Analysis](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Exploratory-Table-Structure-and-Data-Analysis/readme.md)
 - [SQL-Data-Cleaning](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Data-Cleaning/readme.md)
+- [SQL-Query-Optimization-Techniques](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Query-Optimization-Techniques/readme.md)
   
 
