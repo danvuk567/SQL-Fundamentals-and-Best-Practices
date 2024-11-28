@@ -1,6 +1,6 @@
-* SQL Exploratory Data Analysis
+# SQL Exploratory Table Structure and Data Analysis
 
-** Table Indices and Constraints
+## Table Indices and Constraints
 
 Let's look an example of how we can find out what the indexes are on a table. We can use this query to find the **Primary Key** and any other indexes on the table called *Global_Index_Targets*. We see that the Primary Key *PK_Global_Index_Targets* is the primary eky on the *Date* and *Index_ID* columns. We also have a non-unique index *IDX_Global_Index_Targets* on the *Date* column.
 
@@ -16,5 +16,8 @@ Let's look an example of how we can find out what the indexes are on a table. We
     JOIN sys.columns c 
      ON ic.object_id = c.object_id AND ic.column_id = c.column_id
     WHERE i.object_id = OBJECT_ID('dbo.Global_Index_Targets');
+
+![SQL_Data_Cleaning](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Data_Cleaning.jpg?raw=true)
+
 
 
