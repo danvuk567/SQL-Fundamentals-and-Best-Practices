@@ -182,7 +182,7 @@ Now let's refine the query and use the **MAX** function on *match_word_strength*
 
 ![SQL_Date_Formatting.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Date_Formatting.jpg?raw=true)
 
-**6. Remove Bad Characters:** The **TRANSLATE** function can be used to extract to replace a list of characters with a space for each. We can then use **REPLACE** to remove anything with 2 spaces and then **RTRIM** and **LTRIM** to trim any space in 1st position or last position. The new_product columns has the bad characters removed for the products that were found with this criteria.
+**6. Remove Bad Characters:** The **TRANSLATE** function can be used to extract to replace a list of characters with a space for each. We can then use **REPLACE** to put one space where there are two spaces and then **RTRIM** and **LTRIM** to trim any space in 1st position or last position. The new_product columns has the bad characters removed for the products that were found with this criteria.
 
 ![Remove_Bad_Characaters.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/Remove_Bad_Characaters.jpg?raw=true)
 
