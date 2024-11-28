@@ -65,7 +65,7 @@ Let's look at what the table structure looks like. Using the **INFORMATION_SCHEM
           
 ![SQL_Table_Structure.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Structure.jpg?raw=true)
 
-# Table Data Exploration
+## Table Data Exploration
 
 Let's look at the first 5 rows using the **TOP** function and then use **COUNT**, **DISTINCT**, **MIN**, **MAX**, and **AVG** to explore what the data looks like. There are *44* rows in the *Global_Index_Targets* table, 2 distinct *Min_Date* values, and average of *0.194* for *Target_Weight* which is closer to the minimum value of *0.0286* than the maximum value of *0.194*. This may indicate that the higher values closer to the max are not as common. There are also no missing values in the *Target_Weight* column.
 
