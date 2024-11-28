@@ -2,7 +2,7 @@
 
 ## Table Indices and Constraints
 
-Let's look an example of how we can find out what the indexes are on a table. We can use this query to find the **Primary Key** and any other indexes on the table called *Global_Index_Targets*. We see that *PK_Global_Index_Targets* is the Primary Key on the *Date* and *Index_ID* columns. We also have a non-unique index *IDX_Global_Index_Targets* on the *Date* column.
+Let's look an example of how we can find out what the indexes are on a table. We can use the system tablea **sys.indexes** and **sys.index_columns** in this query to find the **Primary Key** and any other indexes on the table called *Global_Index_Targets*. We see that *PK_Global_Index_Targets* is the Primary Key on the *Date* and *Index_ID* columns. We also have a non-unique index *IDX_Global_Index_Targets* on the *Date* column.
 
     SELECT 
      i.name AS index_name,
@@ -19,7 +19,7 @@ Let's look an example of how we can find out what the indexes are on a table. We
 
 ![SQL_Table_Indexes.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Indexes.jpg?raw=true)
 
-For any **Foreign Key** constraints that may exist on a table, this complex query can retrieve relevant information. In this example, we see that the Foreign Key *FK_Global_Index_Targ_Index_ID* on the parent table *Global_Index_Targets* references the table *Global_Indices* on the column *Index_ID* in both tables.
+For any **Foreign Key** constraints that may exist on a table, this complex query that references **sys.foreign_keys**, **sys.foreign_key_columns**, **sys.tables**, and **sys.columns** can retrieve relevant information. In this example, we see that the Foreign Key *FK_Global_Index_Targ_Index_ID* on the parent table *Global_Index_Targets* references the table *Global_Indices* on the column *Index_ID* in both tables.
 
         SELECT 
           fk.name AS foreign_key_name,
@@ -43,3 +43,12 @@ For any **Foreign Key** constraints that may exist on a table, this complex quer
          AND tp.schema_id = SCHEMA_ID('dbo');
          
 ![SQL_Table_Foreign_Key.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Foreign_Key.jpg?raw=true)
+
+## Table Structure
+
+Let's look at what the table structure looks like. Using the **INFORMATION_SCHEMA.COLUMNS** table, we can count he number of columns and then explore what type of data is in those columns.
+
+        SELECT COUNT(COLUMN_NAME) AS "Number of Columns"
+        FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE table_name = 'Global_Index_Targets'
+          AND table_schema = 'dbo';
