@@ -50,13 +50,7 @@ In this example. we can see that Ticker_Name = 'CHKP' has 2 for ROW_NUMBER() and
 
 ![SQL_Standardize_Text2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text2.jpg?raw=true)
 
-**4. Mispelled Text:** The **CHARINDEX**, **SUBSTRING**, and **DIFFERENCE** function can be used to correct text that may have been mispelled provided we also use a lookup table that contains the correct text. In this 
-     example, we have the *category* dimension table containing product categories and the *orders* table. The category table has one or two words in the description so we can break the words up by space using CHARINDEX 
-     and SUBSTRING or assign an empty string for the 2nd word where onse word exists. The same logic can be done for categories in the orders table. We search for the rows in the orders table where category does not 
-     match description in the category table and we can check how close each word is in the orders table compared to the category table by using the DIFFERENCE function. Each word DIFFERENCE comparison indicates how 
-     strong the match is so adding the *match_word1_strength* variable with the *match_word2_strength* gives us a total strength score as *match_word_strength*. We sort each product, category in the orders table by 
-     match_word_strength. We notice that the Life Shaving Foam product with category *"Shing Crem"* has the highest *match_word_strength value = 7* and that the description is *"Shaving Cream"*. So we can assume that the 
-     category was mispelt as "Shing Crem" and should be "Shaving Cream".
+**4. Misspelled Text:** The **CHARINDEX**, **SUBSTRING**, and **DIFFERENCE** function can be used to correct text that may have been misspelled provided we also use a lookup table that contains the correct text. In this example, we have the *category* dimension table containing product categories and the *orders* table. The category table has one or two words in the description so we can break the words up by space using CHARINDEX and SUBSTRING or assign an empty string for the 2nd word where one word exists. The same logic can be done for categories in the orders table. We search for the rows in the orders table where category does not match description in the category table and we can check how close each word is in the orders table compared to the category table by using the DIFFERENCE function. Each word DIFFERENCE comparison indicates how strong the match is so adding the *match_word1_strength* variable with the *match_word2_strength* gives us a total strength score as *match_word_strength*. We sort each product, category in the orders table by match_word_strength. We notice that the Life Shaving Foam product with category *"Shing Crem"* has the highest *match_word_strength value = 7* and that the description is *"Shaving Cream"*. So, we can assume that the category was misspelt as "Shing Crem" and should be "Shaving Cream".
 
     WITH category_words AS
     (SELECT
@@ -182,11 +176,11 @@ Now let's refine the query and use the **MAX** function on *match_word_strength*
 
 ![SQL_Date_Formatting.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Date_Formatting.jpg?raw=true)
 
-**6. Remove Bad Characters:** The **TRANSLATE** function can be used to extract to replace a list of characters with a space for each. We can then use **REPLACE** to put one space where there are two spaces and then **RTRIM** and **LTRIM** to trim any space in 1st position or last position. The new_product columns has the bad characters removed for the products that were found with this criteria.
+**6. Remove Bad Characters:** The **TRANSLATE** function can be used to extract to replace a list of characters with a space for each. We can then use **REPLACE** to put one space where there are two spaces and then **RTRIM** and **LTRIM** to trim any space in 1st position or last position. The *new_product* column has the bad characters removed for the products that were found with this criteria.
 
 ![Remove_Bad_Characaters.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/Remove_Bad_Characaters.jpg?raw=true)
 
-**7. Outlier Validation:** Certain numberical values may not make sense and are considered outliers. In this example, we look for any *total_price* that is negative, $0 or greater than or equal to $500.
+**7. Outlier Validation:** Certain numerical values may not make sense and are considered outliers. In this example, we look for any *total_price* that is negative, $0 or greater than or equal to $500.
 
 ![SQL_Outliers.jpg](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/blob/main/images/SQL_Outliers.jpg?raw=true)
 
