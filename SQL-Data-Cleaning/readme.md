@@ -71,51 +71,51 @@ In this example. we can see that Ticker_Name = 'CHKP' has 2 for ROW_NUMBER() and
       END AS second_word
     FROM [Testing].[Test].category),
     order_words AS
-   (SELECT
-     order_date, 
-     product,
-    category,
-    CASE 
-     WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, 1, CHARINDEX(' ', category) - 1)
-     ELSE category
-    END AS first_word,
-    CASE 
-     WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, CHARINDEX(' ', category), LEN(category))
-     ELSE ''
-    END AS second_word,
-    customer_name, 
-    total_price
-   FROM [Testing].[Test].orders),
-   match_orders AS
-   (SELECT
-     o.order_date,
-     o.product,
-     o.category,
-     c.description,
-     o.first_word AS category_first_word,
-     c.first_word AS description_first_word,
-     o.second_word AS category_second_word,
-     c.second_word AS description_second_word,
-     DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) AS match_word1_strength,
-     DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word2_strength,
-     DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) + DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word_strength,
-     o.customer_name, 
-     o.total_price
-    FROM order_words o, category_words c
-    WHERE NOT EXISTS (SELECT 1 FROM [Testing].[Test].category c WHERE c.description = o.category))
-    SELECT
-     product,
-     category,
-     description,
-     category_first_word,
-     description_first_word,
-     category_second_word,
-     description_second_word,
-     match_word1_strength,
-     match_word2_strength,
-     match_word_strength
-    FROM match_orders
-    ORDER BY product, category, match_word_strength DESC;
+    (SELECT
+      order_date, 
+      product,
+      category,
+      CASE 
+       WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, 1, CHARINDEX(' ', category) - 1)
+       ELSE category
+      END AS first_word,
+      CASE 
+       WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, CHARINDEX(' ', category), LEN(category))
+       ELSE ''
+      END AS second_word,
+      customer_name, 
+      total_price
+     FROM [Testing].[Test].orders),
+     match_orders AS
+     (SELECT
+       o.order_date,
+       o.product,
+       o.category,
+       c.description,
+       o.first_word AS category_first_word,
+       c.first_word AS description_first_word,
+       o.second_word AS category_second_word,
+       c.second_word AS description_second_word,
+       DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) AS match_word1_strength,
+       DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word2_strength,
+       DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) + DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word_strength,
+       o.customer_name, 
+       o.total_price
+      FROM order_words o, category_words c
+      WHERE NOT EXISTS (SELECT 1 FROM [Testing].[Test].category c WHERE c.description = o.category))
+      SELECT
+       product,
+       category,
+       description,
+       category_first_word,
+       description_first_word,
+       category_second_word,
+       description_second_word,
+       match_word1_strength,
+       match_word2_strength,
+       match_word_strength
+      FROM match_orders
+      ORDER BY product, category, match_word_strength DESC;
 
 ![SQL_Standardize_Text1.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text1.jpg?raw=true)
 
@@ -134,47 +134,47 @@ Now let's refine the query and use the **MAX** function to identify the rows tha
       END AS second_word
     FROM [Testing].[Test].category),
     order_words AS
-   (SELECT
-     order_date, 
-     product,
-    category,
-    CASE 
-     WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, 1, CHARINDEX(' ', category) - 1)
-     ELSE category
-    END AS first_word,
-    CASE 
-     WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, CHARINDEX(' ', category), LEN(category))
-     ELSE ''
-    END AS second_word,
-    customer_name, 
-    total_price
-   FROM [Testing].[Test].orders),
-   match_orders AS
-   (SELECT
-     o.order_date,
-     o.product,
-     o.category,
-     c.description,
-     o.first_word AS category_first_word,
-     c.first_word AS description_first_word,
-     o.second_word AS category_second_word,
-     c.second_word AS description_second_word,
-     DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) AS match_word1_strength,
-     DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word2_strength,
-     DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) + DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word_strength,
-     o.customer_name, 
-     o.total_price
-    FROM order_words o, category_words c
-    WHERE NOT EXISTS (SELECT 1 FROM [Testing].[Test].category c WHERE c.description = o.category))
-    SELECT
-     order_date,
-     product,
-     category,
-     description AS new_category,
-     customer_name, 
-     total_price
-    FROM match_orders
-    WHERE match_word_strength IN (SELECT MAX(match_word_strength) FROM match_orders GROUP BY product, category);
+    (SELECT
+      order_date, 
+      product,
+      category,
+      CASE 
+       WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, 1, CHARINDEX(' ', category) - 1)
+       ELSE category
+      END AS first_word,
+      CASE 
+       WHEN CHARINDEX(' ', category) > 0 THEN SUBSTRING(category, CHARINDEX(' ', category), LEN(category))
+       ELSE ''
+      END AS second_word,
+      customer_name, 
+      total_price
+     FROM [Testing].[Test].orders),
+     match_orders AS
+     (SELECT
+       o.order_date,
+       o.product,
+       o.category,
+       c.description,
+       o.first_word AS category_first_word,
+       c.first_word AS description_first_word,
+       o.second_word AS category_second_word,
+       c.second_word AS description_second_word,
+       DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) AS match_word1_strength,
+       DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word2_strength,
+       DIFFERENCE(TRIM(o.first_word), TRIM(c.first_word)) + DIFFERENCE(TRIM(o.second_word), TRIM(c.second_word)) AS match_word_strength,
+       o.customer_name, 
+       o.total_price
+      FROM order_words o, category_words c
+      WHERE NOT EXISTS (SELECT 1 FROM [Testing].[Test].category c WHERE c.description = o.category))
+      SELECT
+       order_date,
+       product,
+       category,
+       description AS new_category,
+       customer_name, 
+       total_price
+      FROM match_orders
+      WHERE match_word_strength IN (SELECT MAX(match_word_strength) FROM match_orders GROUP BY product, category);
 
     ![SQL_Standardize_Text2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Standardize_Text2.jpg?raw=true)
 
