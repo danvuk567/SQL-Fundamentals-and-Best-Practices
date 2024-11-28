@@ -178,3 +178,7 @@ Now let's refine the query and use the **MAX** function on *match_word_strength*
 
 ![SQL_Mispelled_Text2.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Mispelled_Text2.jpg?raw=true)
 
+**5. Date Formatting:** The **FORMAT** function can be used to extract a string with a different date format and **CAST** can be used to extract the time from a date.
+
+![SQL_Date_Formatting.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Date_Formatting.jpg?raw=true)
+
