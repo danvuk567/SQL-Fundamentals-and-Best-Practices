@@ -1,5 +1,7 @@
 # SQL Table Structure Exploration and Data Analysis
 
+![SQL_Table_Structure_Data.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Structure_Data.jpg?raw=true)
+
 ## Table Indices and Constraints
 
 Let's look an example of how we can find out what the indexes are on a table. We can use the system table **sys.indexes** and **sys.index_columns** in this query to find the **Primary Key** and any other indexes on the table called *Global_Index_Targets*. We see that *PK_Global_Index_Targets* is the Primary Key on the *Date* and *Index_ID* columns. We also have a non-unique index *IDX_Global_Index_Targets* on the *Date* column.
