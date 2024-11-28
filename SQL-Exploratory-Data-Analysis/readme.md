@@ -2,7 +2,7 @@
 
 ## Table Indices and Constraints
 
-Let's look an example of how we can find out what the indexes are on a table. We can use the system tablea **sys.indexes** and **sys.index_columns** in this query to find the **Primary Key** and any other indexes on the table called *Global_Index_Targets*. We see that *PK_Global_Index_Targets* is the Primary Key on the *Date* and *Index_ID* columns. We also have a non-unique index *IDX_Global_Index_Targets* on the *Date* column.
+Let's look an example of how we can find out what the indexes are on a table. We can use the system table **sys.indexes** and **sys.index_columns** in this query to find the **Primary Key** and any other indexes on the table called *Global_Index_Targets*. We see that *PK_Global_Index_Targets* is the Primary Key on the *Date* and *Index_ID* columns. We also have a non-unique index *IDX_Global_Index_Targets* on the *Date* column.
 
     SELECT 
      i.name AS index_name,
@@ -46,7 +46,7 @@ For any **Foreign Key** constraints that may exist on a table, this complex quer
 
 ## Table Structure
 
-Let's look at what the table structure looks like. Using the **INFORMATION_SCHEMA.COLUMNS** table, we can count he number of columns and then explore what type of data is in those columns. The follwoing queries show that there are 5 columns with date, int and real types and no string types. *Max_Date* and *Target_Weight* can have null values.
+Let's look at what the table structure looks like. Using the **INFORMATION_SCHEMA.COLUMNS** table, we can count he number of columns and then explore what type of data is in those columns. The following queries show that there are 5 columns with date, int and real types and no string types. *Max_Date* and *Target_Weight* can have null values.
 
         SELECT 
           COUNT(COLUMN_NAME) AS "Number of Columns"
