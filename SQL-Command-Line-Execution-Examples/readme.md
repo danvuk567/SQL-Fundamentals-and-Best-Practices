@@ -73,3 +73,8 @@ Or we can run SQL commands in a **bash script .sh file** in the terminal as long
     else
         echo "There was an error executing the query." 
     fi
+<br/><br/>
+
+:arrow_right: **Next:** [SQL Table Structure Exploration and Data Analysis](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Table-Structure-Exploration-and-Data-Analysis)
+
+
