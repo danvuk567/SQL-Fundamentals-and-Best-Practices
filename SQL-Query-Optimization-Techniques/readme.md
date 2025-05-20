@@ -42,7 +42,7 @@ They are typically exececuted in this order:
    
 **7.** Use **EXPLAIN PLAN** when performance is a concern. It is a command that shows the execution plan of an SQL query, helping you understand how the database processes the query and identifying areas for optimization.<br/><br/>
 
-:arrow_right: **Next:** [SQL Query Optimization Techniques](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Query-Optimization-Techniques)
+:arrow_right: **Back to:** [Home Page](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices))
 
 
 
