@@ -6,7 +6,7 @@
 
 This section describes SQL definitions and fundamental concepts, where and how to execution SQL commands, data exploration and cleaning, and query optimization techniques.
 
-## bookmark_tabs: **Table of Contents** ##
+## :bookmark_tabs: **Table of Contents** ##
 
 * [SQL-Database-Fundamentals](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Database-Fundamentals)
 * [SQL-Command-Line-Execution-Examples](https://github.com/danvuk567/SQL-Best-Practices/blob/main/SQL-Command-Line-Execution-Examples/)
