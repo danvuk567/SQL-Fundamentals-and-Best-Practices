@@ -85,5 +85,5 @@ Let's look at the first 5 rows using the **TOP** function and then use **COUNT**
 
 ![SQL_Table_Data_Exploration.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Data_Exploration.jpg?raw=true)<br/><br/>
 
-
+:arrow_right: **Next:** [SQL Data Cleaning](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Data-Cleaning)
 
