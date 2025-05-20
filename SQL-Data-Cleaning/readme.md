@@ -192,5 +192,5 @@ Now let's refine the query and use the **MAX** function on *match_word_strength*
 
 ![SQL_Text_Validation.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Text_Validation.jpg?raw=true)<br/><br/>
 
-:arrow_right: **Next:** [SQL Table Structure Exploration and Data Analysis](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Data-Cleaning)
+:arrow_right: **Next:** [SQL Query Optimization Techniques](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Query-Optimization-Techniques)
 
