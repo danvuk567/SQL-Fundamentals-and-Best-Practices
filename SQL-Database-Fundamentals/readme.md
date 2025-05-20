@@ -92,9 +92,9 @@
   
   Isolation: ensures that concurrent transactions do not interfere with each other. Each transaction is executed as if it is the only one running on the system, even if other transactions are occurring at the same time.
   
-  Durability: ensures that once a transaction has been committed, its changes are permanent, even in the case of a system crash or power failure.
+  Durability: ensures that once a transaction has been committed, its changes are permanent, even in the case of a system crash or power failure.<br/><br/>
 
-  
+  :arrow_right: **Next:** [Main Page](https://github.com/danvuk567)
 
 
            
