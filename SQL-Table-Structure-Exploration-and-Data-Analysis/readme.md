@@ -83,5 +83,7 @@ Let's look at the first 5 rows using the **TOP** function and then use **COUNT**
          COUNT(CASE WHEN Target_Weight IS NULL THEN 1 END) AS "Number of Target Weight Missing Values"
         FROM dbo.Global_Index_Targets;
 
-![SQL_Table_Data_Exploration.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Data_Exploration.jpg?raw=true)
+![SQL_Table_Data_Exploration.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Table_Data_Exploration.jpg?raw=true)<br/><br/>
+
+
 
