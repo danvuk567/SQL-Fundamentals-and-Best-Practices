@@ -190,4 +190,7 @@ Now let's refine the query and use the **MAX** function on *match_word_strength*
 
 **9. Text Validation:** The **PATINDEX** function can be used to do pattern matching and validate if certain text requires the inclusion of certain characters. In this example, we look for emails that is missing the *@* character which would be invalid.
 
-![SQL_Text_Validation.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Text_Validation.jpg?raw=true)
+![SQL_Text_Validation.jpg](https://github.com/danvuk567/SQL-Best-Practices/blob/main/images/SQL_Text_Validation.jpg?raw=true)<br/><br/>
+
+:arrow_right: **Next:** [SQL Table Structure Exploration and Data Analysis](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Data-Cleaning)
+
