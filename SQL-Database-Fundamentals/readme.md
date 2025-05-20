@@ -94,8 +94,5 @@
   
   Durability: ensures that once a transaction has been committed, its changes are permanent, even in the case of a system crash or power failure.<br/><br/>
 
-  :arrow_right: **Next:** [Main Page](https://github.com/danvuk567)
-
-
-           
+  :arrow_right: **Next:** [SQL Command Line Execution Examples](https://github.com/danvuk567/SQL-Fundamentals-and-Best-Practices/tree/main/SQL-Command-Line-Execution-Examples)
 
